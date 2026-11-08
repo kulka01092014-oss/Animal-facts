@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(https://i.pinimg.com/736x/82/ff/b5/82ffb56c707f02b3f7a976c1e73eeac6.jpg);
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+.scrapbook-frame {
+  display: none;
+  width: 900px;
+  height: 550px;
+  position: relative;
+}
+.default-page {
+  display: block;
+}
+/* Головна магія перемикання 6 сторінок без JS */
+.site-wrapper:has(:target) .default-page {
+  display: none;
+}
+.scrapbook-frame:target {
+  display: block !important;
+}
+.main-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+/* Фони для всіх сторінок */
+.bg-home { background: url('https://unsplash.com') center/cover no-repeat; }
+.bg-all { background: url('https://i.pinimg.com/736x/ce/7c/b6/ce7cb6bd4fbb22cfc6ceaf66e2993780.jpg') center/cover no-repeat; }
+.bg-fox { background: url('https://i.pinimg.com/736x/cd/b8/85/cdb88586ee0ff70269873302763dc745.jpg') center/cover no-repeat; }
+.bg-wolf { background: url('https://i.pinimg.com/736x/8a/e3/eb/8ae3ebafcedc8e64031c4be95fd05f51.jpg') center/cover no-repeat; }
+.bg-otter { background: url('https://i.pinimg.com/736x/e2/d2/93/e2d2938e000e64c024a782f7a60e5509.jpg') center/cover no-repeat; }
+.bg-cat { background: url('https://i.pinimg.com/736x/5a/66/6a/5a666a35c174f71322c2d45be5f656a1.jpg') center/cover no-repeat; }
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+  padding: 15px 40px;
+}
+.nav-item {
+  text-decoration: none;
+  color: #4a3b32;
+  font-size: 22px;
+  margin-left: 30px;
+  font-weight: bold;
+}
+.nav-item:hover {
+  color: #8b5a2b;
+}
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  text-decoration: none;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+.content-box {
+  display: flex;
+  padding: 80px 40px 40px 40px;
+  gap: 30px;
+  height: calc(100% - 60px);
+}
+.gallery-left {
+  width: 40%;
+}
+.gallery-left img {
+  width: 100%;
+  border-radius: 12px;
+  border: 4px solid #fff;
+}
+.text-right, .text-full {
+  width: 60%;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 25px;
+  border-radius: 20px;
+  color: #4a3b32;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.text-full {
+  width: 100%;
+}
+.cloud-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  padding: 20px;
+  position: absolute;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.cloud-left {
+  top: 120px;
+  left: 50px;
+  width: 280px;
+  text-align: center;
+}
+.cloud-right {
+  top: 180px;
+  right: 50px;
+  width: 400px;
+}
+.page-title {
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+.kaomoji {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 22px;
+}
